@@ -102,6 +102,4 @@ Please keep changes small, preserve local-only data handling, avoid telemetry an
 
 ## License
 
-No open-source license has been selected yet. Until a `LICENSE` file is added, the code remains under default copyright and should not be treated as granting permission to copy, redistribute, or publish modified versions.
-
-Choose and add an appropriate open-source license before publishing this repository as an open-source project.
+MIT.
