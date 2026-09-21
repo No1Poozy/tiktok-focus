@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History · TikTok Focus</title>
+  </head>
+  <body>
+    <main class="page">
+      <header class="page-header">
+        <div class="page-heading">
+          <p class="eyebrow">TikTok Focus</p>
+          <h1>History</h1>
+          <p class="muted">Your watched videos, in one place.</p>
+        </div>
+        <nav aria-label="Extension pages">
+          <button id="open-settings" type="button">Settings</button>
+        </nav>
+      </header>
+      <div class="history-toolbar">
+        <p id="recording-status" class="muted">Loading recording preference...</p>
+        <div class="history-actions">
+          <button id="refresh-history" type="button" disabled>Refresh</button>
+          <button id="clear-history" type="button" disabled>Clear history</button>
+        </div>
+      </div>
+      <p id="history-status" class="status page-status" role="status">Loading history...</p>
+      <ul id="history-list" class="history-list" aria-label="Watched videos" aria-busy="true"></ul>
+      <section
+        id="history-empty"
+        class="panel history-empty"
+        aria-labelledby="history-heading"
+        hidden
+      >
+        <span class="empty-mark" aria-hidden="true">—</span>
+        <h2 id="history-heading">No saved videos yet</h2>
+        <p id="empty-description" class="muted"></p>
+      </section>
+      <button id="load-more" class="load-more" type="button" hidden>Load more</button>
+      <p id="navigation-status" class="status page-status" role="status"></p>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

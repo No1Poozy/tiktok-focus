@@ -1,0 +1,92 @@
+@import '../../ui/styles/base.css';
+
+.history-toolbar,
+.history-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.history-toolbar {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.history-toolbar p {
+  max-width: 42ch;
+  font-size: 13px;
+}
+
+.history-list {
+  padding: 0;
+  margin: var(--space-3) 0;
+  list-style: none;
+}
+
+.history-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.history-copy {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+  gap: var(--space-1);
+}
+
+.history-title {
+  overflow-wrap: anywhere;
+  font-weight: 550;
+}
+
+.history-time,
+.history-progress-text {
+  font-size: 12px;
+}
+
+.history-copy progress {
+  width: 100%;
+  max-width: 240px;
+  height: 6px;
+  margin-top: var(--space-1);
+  accent-color: var(--color-accent);
+}
+
+.history-remove {
+  flex-shrink: 0;
+  font-size: 12px;
+}
+
+.load-more {
+  display: block;
+  margin: var(--space-4) auto;
+}
+
+.history-empty {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+  padding: var(--space-6) var(--space-5);
+  text-align: center;
+}
+
+.history-empty p {
+  max-width: 42ch;
+}
+
+.empty-mark {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+}
+
+.page-status {
+  margin-top: var(--space-3);
+}

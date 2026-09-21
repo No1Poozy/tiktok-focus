@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="manifest.open_in_tab" content="true" />
+    <title>Settings · TikTok Focus</title>
+  </head>
+  <body>
+    <main class="page">
+      <header class="page-header">
+        <div class="page-heading">
+          <p class="eyebrow">TikTok Focus</p>
+          <h1>Settings</h1>
+          <p class="muted">Simple preferences, stored on this device.</p>
+        </div>
+        <nav aria-label="Extension pages">
+          <button id="open-history" type="button">History</button>
+        </nav>
+      </header>
+      <section class="panel" aria-labelledby="features-heading">
+        <h2 id="features-heading">Viewing preferences</h2>
+        <div id="features"></div>
+        <p id="feature-status" class="status" role="status">Loading settings...</p>
+      </section>
+      <section class="panel stack" aria-labelledby="preferences-heading">
+        <h2 id="preferences-heading">History preferences</h2>
+        <p class="muted">
+          Videos older than this period are removed from your history automatically. Turning
+          recording off keeps existing history until it expires or you delete it.
+        </p>
+        <form id="settings-form" class="stack">
+          <div class="retention-field">
+            <label for="history-retention">Keep history for</label>
+            <div class="retention-input">
+              <input
+                id="history-retention"
+                name="historyRetentionDays"
+                type="number"
+                inputmode="numeric"
+                min="1"
+                max="365"
+                step="1"
+                required
+                disabled
+                aria-describedby="retention-help"
+              />
+              <span>days</span>
+            </div>
+            <p id="retention-help" class="muted field-help">Choose a whole number from 1 to 365.</p>
+          </div>
+          <div>
+            <button id="save-settings" class="primary" type="submit" disabled>
+              Save preferences
+            </button>
+          </div>
+          <p id="settings-status" class="status" role="status">Loading preferences…</p>
+        </form>
+      </section>
+      <p id="navigation-status" class="status page-status" role="status"></p>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

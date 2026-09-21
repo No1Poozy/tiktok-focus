@@ -1,0 +1,104 @@
+:host {
+  color-scheme: dark;
+  font:
+    13px system-ui,
+    sans-serif;
+  pointer-events: none;
+}
+:host([hidden]) {
+  display: none;
+}
+button {
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  width: var(--control-size, 40px);
+  height: var(--control-size, 40px);
+  padding: 8px;
+  border: 0;
+  border-radius: 50%;
+  color: var(--control-color, #fff);
+  background: var(--control-background, transparent);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 140ms ease,
+    background 140ms ease;
+}
+:host([data-video-hover]) button,
+:host([data-paused]:not([data-docked])) button,
+button:focus-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+:host([data-docked]) button,
+:host([data-detail-controls]) button {
+  transition: background-color 160ms ease;
+}
+button:hover {
+  background: #ffffff24;
+}
+button:active {
+  background: #ffffff38;
+}
+button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+button:disabled {
+  cursor: wait;
+}
+svg {
+  width: 24px;
+  height: 24px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  svg {
+    transition: transform 160ms ease;
+  }
+  button:hover:not(:disabled) svg {
+    transform: scale(1.08);
+  }
+  button:active:not(:disabled) svg {
+    transform: scale(0.94);
+  }
+}
+.status {
+  position: absolute;
+  top: calc(var(--control-size, 40px) + 4px);
+  right: 0;
+  box-sizing: border-box;
+  width: max-content;
+  max-width: var(--status-width, 240px);
+  margin: 0;
+  padding: 6px 8px;
+  border-radius: 6px;
+  color: #eee;
+  background: #101217ed;
+  opacity: 0;
+}
+:host([data-video-hover]) .status,
+:host([data-paused]:not([data-docked])) .status,
+:host(:focus-within) .status {
+  opacity: 1;
+}
+.status[data-error] {
+  color: #ffb4ab;
+}
+.status:empty {
+  display: none;
+}
+@media (hover: none) {
+  button {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  button,
+  :host([data-docked]) button,
+  :host([data-detail-controls]) button {
+    transition: none;
+  }
+}

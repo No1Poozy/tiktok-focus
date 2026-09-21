@@ -1,0 +1,17 @@
+node_modules/
+.output/
+.wxt/
+coverage/
+.cache/
+.pnpm-store/
+.tmp/
+*.log
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.local

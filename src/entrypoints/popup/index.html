@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TikTok Focus</title>
+  </head>
+  <body>
+    <main class="popup">
+      <header class="popup-heading">
+        <h1>TikTok Focus</h1>
+        <p class="muted">A quieter way to watch.</p>
+      </header>
+      <section class="panel feature-panel" aria-label="Viewing preferences">
+        <div id="features"></div>
+      </section>
+      <p id="settings-status" class="status settings-status" role="status">Loading settings...</p>
+      <a id="resume-session" class="resume-link" target="_blank" rel="noopener noreferrer" hidden>
+        Open last watched video
+      </a>
+      <nav class="popup-navigation" aria-label="Extension pages">
+        <button id="open-history" type="button">History</button>
+        <button id="open-settings" type="button">Settings</button>
+      </nav>
+      <p id="navigation-status" class="status" role="status"></p>
+      <footer class="popup-footer">
+        <p>Use Fullscreen on the video to fill your screen.</p>
+        <p>Your preferences and viewing data stay on this device.</p>
+        <p id="extension-status" class="status" role="status">Connecting…</p>
+      </footer>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

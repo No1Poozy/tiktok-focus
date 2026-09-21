@@ -1,0 +1,6 @@
+# Only the bundler's native installation step is needed, if selected by Vite/WXT.
+allowBuilds:
+  esbuild: true
+minimumReleaseAgeExclude:
+  - '@types/node@24.13.6'
+  - eslint@10.11.0
